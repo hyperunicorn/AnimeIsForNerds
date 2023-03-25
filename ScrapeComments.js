@@ -7,6 +7,7 @@ function scrape(){
   while (ix < chatWindow.length){
     chat = chatWindow[ix];
     tm = chat.children[1].children[0].innerText;
+    tm = tm.replace("â€¯", " ");
     content = chat.children[1].children[2].innerText;
     user = chat.children[1].children[1].children[1].innerText;
     msg = {"time" : tm, "content" : content, "user" : user};
